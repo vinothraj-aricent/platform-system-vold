@@ -113,6 +113,7 @@ std::string BuildDataUserDePath(const char* volumeUuid, userid_t userid);
 dev_t GetDevice(const std::string& path);
 
 std::string DefaultFstabPath();
+std::string StorageFstabPath();
 
 status_t RestoreconRecursive(const std::string& path);
 
