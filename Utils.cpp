@@ -646,14 +646,6 @@ std::string DefaultFstabPath() {
     return StringPrintf("/fstab.%s", hardware);
 }
 
-std::string StorageFstabPath() {
-    char hardware[PROPERTY_VALUE_MAX];
-    char storage[PROPERTY_VALUE_MAX];
-    property_get("ro.hardware", hardware, "");
-    property_get("ro.boot.storage_type", storage, "");
-    return StringPrintf("/fstab.%s.%s", hardware, storage);
-}
-
 status_t RestoreconRecursive(const std::string& path) {
     LOG(VERBOSE) << "Starting restorecon of " << path;
 
